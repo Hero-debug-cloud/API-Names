@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 // Add Authencation
 
@@ -12,9 +14,12 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+const password = process.env.PASS;
 // connecting with mongodb
 mongoose.connect(
-  "mongodb+srv://admin-hero:test123@cluster0.gxfyvlz.mongodb.net/NameDB",
+  "mongodb+srv://admin-hero:" +
+    password +
+    "@cluster0.gxfyvlz.mongodb.net/NameDB",
   { useNewUrlParser: true }
 );
 
