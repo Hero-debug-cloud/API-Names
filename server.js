@@ -13,7 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // connecting with mongodb
-mongoose.connect("mongodb://127.0.0.1/NameDB", { useNewUrlParser: true });
+mongoose.connect(
+  "mongodb+srv://admin-hero:test123@cluster0.gxfyvlz.mongodb.net/NameDB",
+  { useNewUrlParser: true }
+);
 
 const NamesSchema = {
   name: String,
