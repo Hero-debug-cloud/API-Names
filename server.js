@@ -113,14 +113,8 @@ app
     });
   });
 
-<<<<<<< HEAD
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-=======
 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
->>>>>>> d710ee627a5e021c631d11c70e6826b2a3245739
